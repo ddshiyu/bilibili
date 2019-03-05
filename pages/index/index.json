@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"bilibili",
+  "usingComponents": {
+    "my-title":"../../components/header/my-heander"
+  }
+}

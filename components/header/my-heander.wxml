@@ -1,0 +1,15 @@
+<!--components/header/my-heander.wxml-->
+<view class='my-title'>
+<navigator class='logo'>
+  <image style='width:140rpx;height:60rpx;' class='logo' mode='aspectFit'   src='../../images/timg.jpeg'></image>
+</navigator>
+  <view class='search'>
+    <image src='../../images/search.jpg' style='width:60rpx;height:44rpx'></image>
+  </view>
+  <view class='user'>
+    <image src='../../images/tv.jpeg' style='width:54rpx;height:60rpx;'></image>
+  </view>
+  <view class='download'>
+    下载app
+  </view>
+</view>

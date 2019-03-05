@@ -1,0 +1,31 @@
+<view>
+<!-- 公共头部 -->
+  <my-title></my-title>  
+  <view class='nav-wrap'>
+    <scroll-view class='nav' scroll-x='true'>
+      <!-- data-index这个定义的自定义属性会在点击的时候出现在e.target中 -->
+      <view bindtap='activeNav' data-index='{{index}}'  class='nav-item {{index===currentIndex?"active":""}}' wx:for='{{navList}}' wx:key='{{item.id}}'>{{item.text}}</view>
+    </scroll-view>
+  </view>
+  <view class='swiper-wrap'>
+    <swiper interval='2000' circular autoplay='true' indicator-dots='true'>
+      <view wx:for='{{swiperList}}' wx:key='{{index}}'>
+        <swiper-item>
+          <navigator>
+            <image src='{{item.imgSrc}}'></image>
+          </navigator>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view class='video-wrap'>
+    <navigator class='video-item' wx:for='{{videosList}}' wx:key='{{index}}' url='../detail/detail?id={{item.id}}'>
+      <view class='video-image'>
+        <image mode='widthFix' src='{{item.imgSrc}}'></image>
+        <view class='count'>{{item.playCount}}</view>
+        <view class='opinion'>{{item.commentCount}}</view>     
+      </view>
+      <view class='video-title'>{{item.desc}}</view>
+    </navigator>
+  </view>
+</view>
